@@ -1,0 +1,27 @@
+h1{
+	color:blue;
+}
+ul{
+	list-style-type : none;
+}
+h2{
+	color:red;
+}
+a{
+	text-decoration: none;
+}
+form{
+	margin-left:50px; 
+}
+#content{
+	background-color:#FFFFDD;
+	border:2px solid black;
+}
+#forms{
+	background-color:#FFFFDD;
+	border:2px solid black;
+}
+#search{
+	float:right;
+	margin-top:-50px;
+}

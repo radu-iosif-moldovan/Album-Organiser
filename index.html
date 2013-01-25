@@ -17,6 +17,7 @@
 	<input type='text' id='search' ng-model='searchText' size='20' placeholder='Search ...'>
 	<ul>
 		<li ng-repeat='band in bands | filter:searchText'>
+			<img ng-src="{{band.url}}">
 			<h2>{{band.name}} :
 				<a href='' ng-click="deleteBand()" >[Delete]</a>
 				<a href='' ng-click="searchBand()" >[Search]</a>
@@ -50,6 +51,7 @@
 		<form id='form1' ng-submit='addAlbum()'>
 			<input type='text' ng-model='bandText' size='20' placeholder='Band Name'>
 			<input type='text' ng-model='albumText' size='20' placeholder='Album name'>
+			<input type='text' ng-model='urlText' size='20' placeholder='Image source'>
 
 			<input type='submit' value='add'>
 		</form>

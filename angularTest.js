@@ -1,6 +1,8 @@
 function BandCtrl ($scope) {
-	
-	$scope.bands = JSON.parse(localStorage.getItem(0));
+	$scope.bands = [{}];
+	if (typeof localStorage.getItem(0)==='string'){
+		console.log("should work")
+	$scope.bands = JSON.parse(localStorage.getItem(0));}
 
 
 	$scope.searchAlbum = function() {
@@ -20,7 +22,7 @@ function BandCtrl ($scope) {
 	$scope.addAlbum = function() {
 		var band = {url:'', name:'', albums:[],songs:[]}, i, flag, j;
 		band.name = $scope.bandText;
-		band.url =$scope.urlText;
+		band.url = $scope.urlText;
 
 		for(i = 0;i < $scope.bands.length; i = i + 1){
 			if($scope.bands[i].name === band.name){

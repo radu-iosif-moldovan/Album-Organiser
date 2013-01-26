@@ -1,5 +1,5 @@
 function BandCtrl ($scope) {
-	$scope.bands = [{}];
+	$scope.bands = [];
 	if (typeof localStorage.getItem(0)==='string'){
 		console.log("should work")
 	$scope.bands = JSON.parse(localStorage.getItem(0));}

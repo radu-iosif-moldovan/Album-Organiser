@@ -1,2 +1,12 @@
-<div id='detail'>TBD detail view for {{bandName}}
+<div id='detail'>
+	<h1>{{bandName}}</h1>
+	<img id="mainImg" ng-src="{{bandUrl}}">
+
+	<ul class="band-thumbs">
+  		<li ng-repeat="url in bandUrls">
+    	<img ng-src="{{url}}" ng-click="setImage(url)">
+  		</li>
+	</ul>
+
+	<p>{{bandDescription}}</p>
 </div>

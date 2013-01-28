@@ -59,7 +59,15 @@ function BandCtrl ($scope, $routeParams) {
     }
 }
 
-function NotYetCtrl($scope, $routeParams) {
-  $scope.bandName = $routeParams.bandName;
+function DetailCtrl($scope, $routeParams, $http) {
+    $scope.bandName = $routeParams.bandName;
+    $http.get('data/' + $scope.bandName + '.json').success(function(data) {
+        $scope.bandDescription = data[0].description;
+        $scope.bandUrl = data[0].url;
+        $scope.bandUrls = data[0].urls;
+     });
+    $scope.setImage = function(imageUrl) {
+        $scope.bandUrl = imageUrl;
+  }
 
 }

@@ -6,9 +6,9 @@
   	<option value="name">Alphabetical</option>  	
 	</select>
 	<ul>
-		<li ng-repeat='band in bands | filter:searchText | orderBy:orderProp'>
+		<li id="liband" ng-repeat='band in bands | filter:searchText | orderBy:orderProp'>
 			<a href='#/bands/{{band.name}}'><img ng-src="{{band.url}}"></a>
-			<h2 ng-click="someAlert()">{{band.name}} :
+			<h2 id='bnd'>{{band.name}} :
 				<a href='' ng-click="deleteBand()" >[Delete]</a>
 				<a href='' ng-click="searchBand()" >[Search]</a>
 			</h2>
@@ -23,7 +23,7 @@
 
 					<ul ng-show="checked">
 						<li ng-repeat='song in album.songs' >
-							<span>{{song}}</span>
+							<span id='songli'><b>{{song}}</b></span>
 							<a href='' ng-click="deleteSong()" >[Delete]</a>
 							<a href='' ng-click="searchSong()" >[Search]</a>
 					</ul>
@@ -34,6 +34,9 @@
 					</form>
 			</ul>
 	</ul>
+	<form id='save' ng-submit='save()'>
+		<input type='submit' class='btn btn-primary'  value='Save'>
+	</form>
 	</div>
 	<br><br>
 	<div id='forms'>
@@ -42,9 +45,6 @@
 			<input type='text' ng-model='albumText' size='20' placeholder='Album name'>
 			<input type='text' ng-model='urlText' size='20' placeholder='Image source'>
 
-			<input type='submit' value='add'>
-		</form>
-		<form ng-submit='save()'>
-			<input type='submit'  value='Save'>
+			<input type='submit' class='btn btn-primary' value='add'>
 		</form>
 	</div>

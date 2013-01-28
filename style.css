@@ -1,17 +1,11 @@
-h1{
-	color:blue;
+#index h1{
+	color:#049cdb;
 }
 ul{
 	list-style-type : none;
 }
-h2{
-	color:red;
-}
-a{
-	text-decoration: none;
-}
-form{
-	margin-left:50px; 
+#index h2 {
+	color:#9d261d;
 }
 img{
 	height: 100px;
@@ -19,17 +13,18 @@ img{
 	float:left;
 }
 #content{
-	background-color:#AAAAAA;
+	background-color:#CCCCCC;
 	border:2px solid white;
 }
 #forms{
-	background-color:#AAAAAA;
+	background-color:#CCCCCC;
 	border:2px solid white;
 }
 
 #order{
+	clear:both;
 	float:right;
-	margin-top:-20px;
+	margin-top:0px;
 }
 #l1{
 	float:right;
@@ -47,6 +42,34 @@ img{
 #detail{
 	color:white;
 }
-html{
+#bands, body ,html{
 	background-color:black;
+}
+#save{
+	margin-left:1800px;	
+}
+#index #songli{
+	color:#46a546;
+}
+#detail p{
+	width: 800px;
+	font-size: 20px;
+	float:left;
+	clear: left;
+}
+#detail img{
+	float:right;
+	width:640px;
+	height:480px;
+	margin-right: 100px;
+}
+#liband{
+	margin-top:50px;
+}
+#detail .band-thumbs img{
+	float:left;
+	width:240px;
+	height:180px;
+	margin-right: 100px;
+
 }

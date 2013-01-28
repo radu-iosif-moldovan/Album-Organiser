@@ -1,0 +1,19 @@
+
+[
+	{
+		"url":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQG6GVphJxBsJ_5NF1unkiZ53znH2UnosNpidHjXjYNfEhZWOY8",
+		"name":"AC/DC",
+		"albums":[
+			{
+				"name":"Back in Black",
+				"songs":["Rock and Roll Ain't Noise Pollution","Back in Black","You Shook Me All Night Long"],
+				"$$hashKey":"006"
+			},
+			{
+				"name":"High Voltage",
+				"songs":["It's a Long Way to the Top (If You Wanna Rock 'n' Roll)","High Voltage"],
+				"$$hashKey":"008"
+			}],
+		"$$hashKey":"004"
+	}
+]

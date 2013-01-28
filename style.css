@@ -19,12 +19,23 @@ img{
 
 }
 #content{
-	background-color:#DDDDDD;
+	background-color:#AAAAAA;
 	border:2px solid white;
 }
 #forms{
-	background-color:#DDDDDD;
+	background-color:#AAAAAA;
 	border:2px solid white;
+}
+
+#order{
+	float:right;
+	margin-top:-20px;
+}
+#l1{
+	float:right;
+	margin-top:-20px;
+	margin-right:110px;
+
 }
 #search{
 	float:right;

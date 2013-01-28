@@ -1,9 +1,8 @@
-function BandCtrl ($scope, $http) {
+function BandCtrl ($scope, $routeParams) {
     $scope.bands = [];
-    if (typeof localStorage.getItem(0) === 'string'){
-        console.log("should work")
-    $scope.bands = JSON.parse(localStorage.getItem(0));}
-
+    if (typeof localStorage.getItem(0) === 'string'){       
+        $scope.bands = JSON.parse(localStorage.getItem(0));
+    }
     $scope.searchAlbum = function() {
         window.open("http://en.wikipedia.org/wiki/" + this.album.name + "_(album)")
     }
@@ -50,4 +49,12 @@ function BandCtrl ($scope, $http) {
     $scope.save = function() {
         localStorage.setItem(0, JSON.stringify($scope.bands));
     }
+        $scope.someAlert = function() {
+        alert(this.band.name + ' was clicked')
+    }
+}
+
+function NotYetCtrl($scope, $routeParams) {
+  $scope.bandName = $routeParams.bandName;
+  
 }

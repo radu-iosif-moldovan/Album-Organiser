@@ -16,7 +16,7 @@ form{
 img{
 	height: 100px;
 	width: 100px;
-
+	float:left;
 }
 #content{
 	background-color:#AAAAAA;
@@ -40,6 +40,12 @@ img{
 #search{
 	float:right;
 	margin-top:-50px;
+}
+#albums{
+	margin-left: 100px;
+}
+#detail{
+	color:white;
 }
 html{
 	background-color:black;

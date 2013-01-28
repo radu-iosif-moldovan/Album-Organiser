@@ -1,0 +1,50 @@
+<div id='content'>
+	<h1>Bands:</h1>
+	<input type='text' id='search' ng-model='searchText' size='20' placeholder='Search ...'>
+	<label id='l1'>Order by:</label>
+	<select id='order' ng-model="orderProp">
+  	<option value="name">Alphabetical</option>  	
+	</select>
+	<ul>
+		<li ng-repeat='band in bands | filter:searchText | orderBy:orderProp'>
+			<a href='#/bands/{{band.name}}'><img ng-src="{{band.url}}"></a>
+			<h2 ng-click="someAlert()">{{band.name}} :
+				<a href='' ng-click="deleteBand()" >[Delete]</a>
+				<a href='' ng-click="searchBand()" >[Search]</a>
+			</h2>
+			
+			<ul id="albums">
+				<li ng-repeat='album in band.albums'>
+					<input type="checkbox" ng-model="checked">									
+					<span><em>{{album.name}}</em></span>
+					<a href='' ng-click="deleteAlbum()" >[Delete]</a>
+					<a href='' ng-click="searchAlbum()" >[Search]</a>
+					<br>
+
+					<ul ng-show="checked">
+						<li ng-repeat='song in album.songs' >
+							<span>{{song}}</span>
+							<a href='' ng-click="searchSong()" >[Search]</a>
+
+					</ul>
+					<form ng-submit='addSong(songText)' ng-show="checked">	
+					<input type='text' ng-model='songText' size='20' placeholder='Song name'>
+					<span>{{songText}}<span>				
+					<input type='submit' value='add'>
+					</form>
+			</ul>
+	</ul>
+	</div>
+	<br><br>
+	<div id='forms'>
+		<form id='form1' ng-submit='addAlbum()'>
+			<input type='text' ng-model='bandText' size='20' placeholder='Band Name'>
+			<input type='text' ng-model='albumText' size='20' placeholder='Album name'>
+			<input type='text' ng-model='urlText' size='20' placeholder='Image source'>
+
+			<input type='submit' value='add'>
+		</form>
+		<form ng-submit='save()'>
+			<input type='submit'  value='Save'>
+		</form>
+	</div>

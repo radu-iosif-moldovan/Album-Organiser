@@ -41,6 +41,11 @@ function BandCtrl ($scope, $routeParams) {
         var index = $scope.bands[$scope.bands.indexOf(this.band)].albums.indexOf(this.album);
         $scope.bands[$scope.bands.indexOf(this.band)].albums.splice(index, 1);
     }
+    $scope.deleteSong = function() {
+         //this is the index in bands[x].albums[y].
+        var index = $scope.bands[$scope.bands.indexOf(this.band)].albums[$scope.bands[$scope.bands.indexOf(this.band)].albums.indexOf(this.album)].songs.indexOf(this.song);
+        $scope.bands[$scope.bands.indexOf(this.band)].albums[$scope.bands[$scope.bands.indexOf(this.band)].albums.indexOf(this.album)].songs.splice(index, 1);
+    }
         $scope.deleteBand = function() {
          //this is the index in bands[x]
         var index = $scope.bands.indexOf(this.band)
@@ -56,5 +61,5 @@ function BandCtrl ($scope, $routeParams) {
 
 function NotYetCtrl($scope, $routeParams) {
   $scope.bandName = $routeParams.bandName;
-  
+
 }

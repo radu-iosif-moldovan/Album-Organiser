@@ -24,8 +24,8 @@
 					<ul ng-show="checked">
 						<li ng-repeat='song in album.songs' >
 							<span>{{song}}</span>
+							<a href='' ng-click="deleteSong()" >[Delete]</a>
 							<a href='' ng-click="searchSong()" >[Search]</a>
-
 					</ul>
 					<form ng-submit='addSong(songText)' ng-show="checked">	
 					<input type='text' ng-model='songText' size='20' placeholder='Song name'>

@@ -1,0 +1,37 @@
+<div id='content'>
+	<h1>Authors:</h1>
+	<input type='text' id='search' ng-model='searchText' size='20' placeholder='Search ...'>
+	<label id='l1'>Order by:</label>
+	<select id='order' ng-model="orderProp">
+  	<option value="name">Alphabetical</option>  	
+	</select>
+	<ul>
+		<li id="liband" ng-repeat='author in authors  | filter:searchText | orderBy:orderProp'>
+			<a href='#/books/{author.name}}'><img ng-src="{{author.url}}"></a>
+			<h2 id='bnd'>{{author.name}} :
+				<a href='' ng-click="deleteAuthor()" >[Delete]</a>
+				<a href='' ng-click="searchAuthor()" >[Search]</a>
+			</h2>
+			<ul id="albums">
+				<li ng-repeat='book in author.books | filter:searchText'>							
+					<span><em>{{book.name}}</em></span>
+					<a href='' ng-click="deleteBookm()" >[Delete]</a>
+					<a href='' ng-click="searchBook()" >[Search]</a>
+					<br>
+			</ul>			
+
+	</ul>
+
+	<form id='save' ng-submit='save()'>
+		<input type='submit' class='btn btn-primary'  value='Save'>
+	</form>
+	</div>
+	<br><br>
+	<div id='forms'>
+		<form id='form1' ng-submit='addAuthor()'>
+			<input type='text' ng-model='authorText' size='20' placeholder='Author Name'>
+			<input type='text' ng-model='bookText' size='20' placeholder='Book name'>
+			<input type='text' ng-model='urlText' size='20' placeholder='Image source'>
+			<input type='submit' class='btn btn-primary' value='add'>
+		</form>
+	</div>

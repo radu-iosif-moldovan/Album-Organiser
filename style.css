@@ -1,10 +1,10 @@
-#index h1{
+.index h1{
 	color:#049cdb;
 }
 ul{
 	list-style-type : none;
 }
-#index h2 {
+.index h2{
 	color:#9d261d;
 }
 img{
@@ -24,7 +24,7 @@ img{
 #order{
 	clear:both;
 	float:right;
-	margin-top:0px;
+
 }
 #l1{
 	float:right;
@@ -37,13 +37,15 @@ img{
 	margin-top:-50px;
 }
 #albums{
-	margin-left: 100px;
+	margin-left: 100px;s
 }
 #detail{
 	color:white;
 }
 #bands, body ,html{
-	background-color:black;
+	
+	background: #000000;
+
 }
 #save{
 	margin-left:1800px;	
@@ -53,6 +55,7 @@ img{
 }
 #detail p{
 	width: 800px;
+	font-family:"Times New Roman", Times, sans-serif;
 	font-size: 20px;
 	float:left;
 	clear: left;
@@ -71,5 +74,4 @@ img{
 	width:240px;
 	height:180px;
 	margin-right: 100px;
-
 }
